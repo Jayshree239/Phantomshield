@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600">
+  <style> .text{font:12px sans-serif;} .lifeline{stroke:#666;stroke-dasharray:4} .actor{font-weight:bold}</style>
+  <!-- Actors -->
+  <text x="40" y="40" class="actor">User</text>
+  <text x="200" y="40" class="actor">Frontend</text>
+  <text x="420" y="40" class="actor">Backend / ScanService</text>
+  <text x="700" y="40" class="actor">Predictor & Explainer</text>
+  
+  <!-- Lifelines -->
+  <line x1="60" y1="60" x2="60" y2="520" class="lifeline"/>
+  <line x1="220" y1="60" x2="220" y2="520" class="lifeline"/>
+  <line x1="460" y1="60" x2="460" y2="520" class="lifeline"/>
+  <line x1="740" y1="60" x2="740" y2="520" class="lifeline"/>
+
+  <!-- Messages -->
+  <text x="80" y="90" class="text">1. enter URL/email/SMS</text>
+  <line x1="80" y1="95" x2="200" y2="95" stroke="#000"/>
+
+  <text x="240" y="130" class="text">2. send /api/scan</text>
+  <line x1="220" y1="135" x2="460" y2="135" stroke="#000"/>
+
+  <text x="480" y="170" class="text">3. extract features</text>
+  <line x1="460" y1="175" x2="740" y2="175" stroke="#000"/>
+
+  <text x="480" y="210" class="text">4. predict & ensemble</text>
+  <line x1="740" y1="215" x2="460" y2="215" stroke="#000"/>
+
+  <text x="240" y="250" class="text">5. build explanation</text>
+  <line x1="460" y1="255" x2="740" y2="255" stroke="#000"/>
+
+  <text x="240" y="300" class="text">6. save result</text>
+  <line x1="460" y1="305" x2="700" y2="305" stroke="#000"/>
+
+  <text x="80" y="340" class="text">7. return response</text>
+  <line x1="460" y1="345" x2="220" y2="345" stroke="#000"/>
+
+  <text x="240" y="380" class="text">8. render result & explanation</text>
+  <line x1="220" y1="385" x2="80" y2="385" stroke="#000"/>
+
+  <text x="40" y="460" class="text">Notes: sequence simplified for clarity in report.</text>
+</svg>

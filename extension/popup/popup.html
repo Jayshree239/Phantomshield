@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhantomShield</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup-root">
+      <header class="popup-header">
+        <div class="brand-row">
+          <img src="../icons/icon-48.png" alt="PhantomShield" class="brand-icon" />
+          <div>
+            <h1>PHANTOMSHIELD</h1>
+            <p>Real-time phishing defense</p>
+          </div>
+        </div>
+        <p id="currentUrl" class="current-url">Loading URL...</p>
+      </header>
+
+      <section id="loadingState" class="loading-state hidden">
+        <div class="loader-shield">🛡</div>
+        <p class="loading-title">Scanning...</p>
+        <p id="loadingStep" class="loading-step">Extracting features...</p>
+      </section>
+
+      <section id="resultState" class="result-state hidden">
+        <div class="meter-wrap">
+          <div id="meterRing" class="meter-ring">
+            <div class="meter-inner">
+              <p id="scoreValue" class="score-value">0</p>
+              <p id="levelValue" class="level-value">SAFE</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="status-row">
+          <span id="statusBadge" class="status-badge">SAFE</span>
+          <span id="scanTime" class="scan-time">just now</span>
+        </div>
+
+        <section id="explanationSection" class="panel hidden">
+          <p class="panel-title">AI EXPLANATION</p>
+          <p id="explanationText" class="scroll-box">No explanation available.</p>
+        </section>
+
+        <section id="tipSection" class="panel">
+          <p class="panel-title">TIP</p>
+          <p id="tipText" class="tip-text">Always verify suspicious pages using official links.</p>
+        </section>
+
+        <div class="actions">
+          <button id="scanManualBtn" class="btn btn-primary" type="button">SCAN MANUALLY</button>
+          <button id="viewReportBtn" class="btn" type="button">VIEW FULL REPORT →</button>
+          <button id="reportSafeBtn" class="btn btn-subtle" type="button">REPORT AS SAFE</button>
+        </div>
+      </section>
+
+      <p id="toast" class="toast hidden">Done</p>
+    </main>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
